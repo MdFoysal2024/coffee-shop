@@ -12,7 +12,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world</div>,
+    element: <div>Hello React world </div>,
   },
   {
     path: "/1/",
