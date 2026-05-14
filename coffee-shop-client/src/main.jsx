@@ -1,22 +1,35 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
+import App from './App.jsx';
+
 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
+import AddCoffee from './components/AddCoffee.jsx';
+import UpdateCoffee from './components/UpdateCoffee.jsx';
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello React world </div>,
+    element: <App></App>,
   },
   {
     path: "/1/",
     element: <div> Amar sonar bangla  ami tomay Valo basi</div>,
+  },
+  {
+    path: "addCoffee",
+    element: <AddCoffee></AddCoffee>,
+  },
+  {
+    path: "updateCoffee",
+    element: <UpdateCoffee></UpdateCoffee>,
   },
 ]);
 
@@ -25,6 +38,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
